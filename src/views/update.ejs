@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <form action="/abc/update-user" method="post">
+            <div>
+                <label>Name:</label>
+                <input name="name" value="<%= dataUser.name %>" />
+            </div>
+            <div>
+                <label>Email:</label>
+                <input name="email" value="<%= dataUser.email %>" />
+            </div>
+            <div>
+                <label>Created at:</label>
+                <input name="created_at" value="<%=dataUser.created_at %>" />
+            </div>
+            <div>
+                <form>
+                    <input type="text" value="<%= dataUser.id %>" hidden name="id" />
+                    <button type="submit">Update</button>
+                </form>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
